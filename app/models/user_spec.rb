@@ -1,15 +1,13 @@
-require 'rails_helper'
-
 RSpec.describe User, type: :model do
   it "should have secure password" do
-    user = User.create(first_name: 'Bob', password: 'secret')
+    user = User.create(name: 'Bob', password: 'secret')
     expect(user.save).to be true
     expect(user.authenticate('not-secret')).to be false
   end
 
   it "should fail on bad password confirmation" do
     user = User.create(
-      first_name: 'Jill',
+      name: 'Jill',
       password: 'secret',
       password_confirmation: 'something else'
     )
@@ -18,7 +16,7 @@ RSpec.describe User, type: :model do
 
   it "should succeed on good password confirmation" do
     user = User.create(
-      first_name: 'Jill',
+      name: 'Jill',
       password: 'secret',
       password_confirmation: 'secret'
     )
