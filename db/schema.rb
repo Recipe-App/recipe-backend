@@ -29,5 +29,4 @@ ActiveRecord::Schema.define(version: 2018_07_31_174217) do
     t.string "password_confirmation"
   end
 
-  :password, :password_confirmation
 end
