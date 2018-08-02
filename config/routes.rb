@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recipes
   resources :pantry_items
   post 'user_token' => 'user_token#create'
   resources :users
