@@ -48,6 +48,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
+    cancancan (2.2.0)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     diff-lcs (1.3)
@@ -85,6 +86,7 @@ GEM
     pg (1.0.0)
     puma (3.12.0)
     rack (2.0.5)
+    rack-cors (1.0.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
@@ -115,6 +117,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rolify (5.2.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -160,11 +163,14 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
+  cancancan
   knock
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.0)
+  rolify
   rspec-rails
   spring
   spring-watcher-listen (~> 2.0.0)
