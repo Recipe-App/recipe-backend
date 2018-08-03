@@ -1,5 +1,4 @@
 class SavedRecipesController < ApplicationController
-  before_action :authenticate_user
 
   def show
     @recipes = SavedRecipe.all
