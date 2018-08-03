@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :saved_recipes,  defaults: {format: :json}
   resources :pantry_items
   post 'user_token' => 'user_token#create'
   resources :users,  defaults: {format: :json}
