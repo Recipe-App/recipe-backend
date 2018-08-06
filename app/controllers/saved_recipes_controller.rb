@@ -2,7 +2,7 @@ class SavedRecipesController < ApplicationController
   before_action :authenticate_user
 
   def show
-    @recipes = SavedRecipe.all
+    @recipes = User.find(params[:id]).saved_recipes
   end
 
   def create
