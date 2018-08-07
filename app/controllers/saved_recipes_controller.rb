@@ -20,8 +20,9 @@ class SavedRecipesController < ApplicationController
   def updated
   end
 
-  def delete
-    User.find(params[:delete][:user_id]).saved_recipes.where(url: params[:delete][:url]).destroy_all
+  def destroy
+    SavedRecipe.destroy(params[:id])
+    render json: {response: "successful deletion!"}, status: 201
   end
 
 
