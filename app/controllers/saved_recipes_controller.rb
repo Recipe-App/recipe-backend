@@ -1,10 +1,6 @@
 class SavedRecipesController < ApplicationController
   before_action :authenticate_user
 
-  def show
-    @recipes = User.find(params[:id]).saved_recipes
-  end
-
   def create
     recipe = SavedRecipe.new(recipe_params)
 
@@ -16,6 +12,18 @@ class SavedRecipesController < ApplicationController
     end
 
   end
+
+  def show
+    @recipes = User.find(params[:id]).saved_recipes
+  end
+
+  def updated
+  end
+
+  def delete
+    User.find(params[:delete][:user_id]).saved_recipes.where(url: params[:delete][:url]).destroy_all
+  end
+
 
   private
   def recipe_params
