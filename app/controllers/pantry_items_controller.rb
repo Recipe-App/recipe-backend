@@ -1,5 +1,11 @@
 class PantryItemsController < ApplicationController
 
+def show
+  items = User.find(params[:id]).pantry_items.last
+  render json: items, status: 201
+
+end
+
 
 def create
   pantry_items = PantryItem.new(pantry_items_params)
