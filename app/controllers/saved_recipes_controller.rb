@@ -17,7 +17,7 @@ class SavedRecipesController < ApplicationController
     @recipes = User.find(params[:id]).saved_recipes
   end
 
-  def updated
+  def update
   end
 
   def destroy
