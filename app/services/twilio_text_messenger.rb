@@ -8,8 +8,8 @@ class TwilioTextMessenger
   def call
     client = Twilio::REST::Client.new
     client.messages.create({
-      from: '+16196481608',
-      to: '6197502444',
+      from: ENV["twilio_phone_number"],
+      to: ENV["test_phone_number"],
       body: message
     })
   end
