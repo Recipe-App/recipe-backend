@@ -23,3 +23,6 @@
 
 #Ignore the Secrets file
 /config/secrets.yml
+
+# Ignore application configuration
+/config/application.yml
