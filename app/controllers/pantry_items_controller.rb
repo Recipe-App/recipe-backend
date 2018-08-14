@@ -10,8 +10,6 @@ end
 def create
   pantry_items = PantryItem.new(pantry_items_params)
       if pantry_items.save
-        message = "This works5"
-        TwilioTextMessenger.new(message).call
         pantry_items.save
         render json: pantry_items, status: 201
     end

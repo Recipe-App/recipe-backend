@@ -1,5 +1,5 @@
 class SavedRecipesController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
 
   def create
     recipe = SavedRecipe.new(recipe_params)
