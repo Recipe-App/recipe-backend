@@ -22,7 +22,7 @@ class SavedRecipesController < ApplicationController
 
   def destroy
     SavedRecipe.find(params[:id]).delete
-    render json: {response: "successful deletion!"}, status: 201
+    render json: {response: "Recipe Deleted!"}, status: 201
   end
 
 
