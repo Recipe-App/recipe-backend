@@ -1,9 +1,9 @@
 class SavedRecipesController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
 
   def create
     recipe = SavedRecipe.new(recipe_params)
-
+    byebug
     if SavedRecipe.pluck(:url).exclude?(recipe.url)
       recipe.save
       render json: recipe, status: 201
