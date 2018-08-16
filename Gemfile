@@ -31,9 +31,6 @@ gem 'knock'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
-#Authorization
-gem 'cancancan'
-gem 'rolify'
 gem 'rspec-rails'
 
 group :development, :test do
