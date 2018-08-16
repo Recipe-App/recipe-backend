@@ -3,7 +3,6 @@ class SavedRecipesController < ApplicationController
 
   def create
     recipe = SavedRecipe.new(recipe_params)
-
     if SavedRecipe.pluck(:url).exclude?(recipe.url)
       recipe.save
       render json: recipe, status: 201

@@ -50,8 +50,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
-    cancancan (2.2.0)
-    capybara (3.6.0)
+    capybara (3.3.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -140,7 +139,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rolify (5.2.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-example_steps (3.0.2)
@@ -162,7 +160,7 @@ GEM
     rspec-support (3.7.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
-    selenium-webdriver (3.14.0)
+    selenium-webdriver (3.13.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     spring (2.0.2)
@@ -198,7 +196,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
-  cancancan
   capybara
   figaro
   jbuilder (~> 2.5)
@@ -209,7 +206,6 @@ DEPENDENCIES
   puma (~> 3.11)
   rack-cors
   rails (~> 5.2.0)
-  rolify
   rspec-example_steps
   rspec-rails
   selenium-webdriver
