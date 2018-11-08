@@ -8,8 +8,8 @@ class TwilioTextMessenger
   def call
     client = Twilio::REST::Client.new
     client.messages.create({
-      from: Rails.application.secrets.twilio_phone_number,
-      to: Rails.application.secrets.test_phone_number,
+      from: ENV["twilio_phone_number"],
+      to: ENV["test_phone_number"],
       body: message
     })
   end
